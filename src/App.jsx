@@ -1,33 +1,19 @@
 import './App.css'
-import { useState } from 'react';
+import Register from "./components/Register";
 
+//리액트에서 리렌더링 되는 세가지 상황
+//1. 자신이 관리하는 state값이 변경되었을때
+//2.자신이 제공받는 props의 값이 변경되었을때
+//3.자신의 부모 컴포넌트가 리렌더링 될 때
+
+
+//최상위 부모컴포넌트App
 function App() {
-          //값,함수
-    const [count, setCount]  = useState(0);
-    const [light, setLight]  = useState("OFF"); 
 
   return (
     <>
-    <div>
-    <h1>{light}</h1>
-    <button onClick={()=>{
-      setLight(light === 'ON'? "OFF":"ON");
-
-    }}
-    >
-      {light === "ON"? "끔":"켬"}
-    </button>
-
-    </div>
-
-  <div>
-    <h1>{count}</h1>
-      <button onClick={()=>{
-      setCount(count + 1);
-     }}>
-      +
-    </button>
-</div>
+    <Register />
+ 
      
     </>
   );
