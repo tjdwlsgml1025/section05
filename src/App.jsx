@@ -15,7 +15,7 @@ function App() {
 
     }}
     >
-      {light === "ON"? "끄기":"켜기"}
+      {light === "ON"? "끔":"켬"}
     </button>
 
     </div>
